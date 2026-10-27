@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fixed email table layout */
+.email-table {
+  width: 100%;
+  min-width: 1150px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.email-table th,
+.email-table td {
+  box-sizing: border-box;
+  padding: 12px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.email-table th {
+  white-space: nowrap;
+}
+
+.email-table td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Explicit column widths */
+.email-table .col-sender {
+  width: 13%;
+}
+
+.email-table .col-sender-email {
+  width: 15%;
+}
+
+.email-table .col-subject {
+  width: 25%;
+}
+
+.email-table .col-category {
+  width: 12%;
+}
+
+.email-table .col-date {
+  width: 12%;
+}
+
+.email-table .col-priority {
+  width: 8%;
+}
+
+.email-table .col-actions {
+  width: 15%;
+}
+
+/* Sender and trusted badge */
+.email-table .sender-cell,
+.email-table .sender-email-cell {
+  min-width: 0;
+  max-width: none;
+}
+
+.email-table .sender-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.email-table .trusted-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.email-table .sender-email-cell {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Keep horizontal scrolling inside the table container */
+.email-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .email-table {
+    min-width: 1150px;
+  }
+}
